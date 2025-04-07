@@ -1,0 +1,39 @@
+from prettytable import PrettyTable
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = '1'
+import torch
+import numpy as np
+import time
+import os.path as op
+
+from datasets import build_dataloader
+from processor.processor import do_inference
+from utils.checkpoint import Checkpointer
+from utils.logger import setup_logger
+from model import build_model
+from utils.metrics import Evaluator
+import argparse
+from utils.iotools import load_train_configs
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description="IRRA Test")
+    sub = '/home/qinyang/projects/Text2ImagepPerson/NoiseRID/DECL_IRRA/logs/RSTPReid/20230622_220805_iira_decl+0.8_IRRA'
+    parser.add_argument("--config_file", default=f'{sub}/configs.yaml')
+    args = parser.parse_args()
+    args = load_train_configs(args.config_file)
+
+    args.training = False
+    logger = setup_logger('IRRA', save_dir=args.output_dir, if_train=args.training)
+    logger.info(args)
+    device = "cuda"
+    test_img_loader, test_txt_loader, num_classes = build_dataloader(args)
+    asss = ['best.pth','last.pth']
+    for i in asss:
+        print(op.join(args.output_dir, i))
+        if os.path.exists(op.join(args.output_dir, i)):
+            model = build_model(args,num_classes=num_classes)
+            checkpointer = Checkpointer(model)
+            checkpointer.load(f=op.join(args.output_dir, i))
+            model.to(device)
+            do_inference(model, test_img_loader, test_txt_loader)
