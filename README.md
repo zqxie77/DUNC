@@ -47,7 +47,16 @@ Organize them in `your dataset root dir` folder as follows:
 ## Training
 
 ```python
-sh 
+python train.py \
+--name iira \
+--img_aug \
+--batch_size 64 \
+--MLM \
+--loss_names 'sdm+mlm+id' \
+--dataset_name 'CUHK-PEDES' \
+--root_dir 'your dataset root dir' \
+--num_epoch 60
+```
 ```
 
 ## Testing
