@@ -72,7 +72,6 @@ python test.py --config_file 'path/to/model_dir/configs.yaml'
 |      **IRRA ** | ViT-B-16/Xformer | **73.38** | **89.93** | **93.71** | **66.13** | **50.24** |
 |      **DUNC （ours）** | ViT-B-16/Xformer | |
 
-[Model & log for CUHK-PEDES](https://drive.google.com/file/d/1OBhFhpZpltRMZ88K6ceNUv4vZgevsFCW/view?usp=share_link)
 
 #### ICFG-PEDES dataset
 
@@ -86,7 +85,6 @@ python test.py --config_file 'path/to/model_dir/configs.yaml'
 |     **IRRA ** | **63.46** | **80.24** | **85.82** | **38.05** | **7.92** |
 |      **DUNC（ours） ** | ViT-B-16/Xformer | |
 
-[Model & log for ICFG-PEDES](https://drive.google.com/file/d/1Y3D7zZsKPpuEHWJ9nVecUW-HaKdjDI9g/view?usp=share_link)
 
 #### RSTPReid dataset
 
