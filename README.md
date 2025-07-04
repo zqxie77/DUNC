@@ -79,7 +79,7 @@ python test.py --config_file 'path/to/model_dir/configs.yaml'
 |      CFine      |  ViT-B-16/BERT   |   69.57   |   85.93   |   91.15   |     -     |     -     |
 |    **CLIP**     | ViT-B-16/Xformer |   68.19   |   86.47   |   91.47   |   61.12   |   44.86   |
 |      **IRRA ** | ViT-B-16/Xformer | **73.38** | **89.93** | **93.71** | **66.13** | **50.24** |
-|      **DUNC （ours）** | ViT-B-16/Xformer | |
+|      **DUNC （ours）** | ViT-B-16/Xformer |  **76.14** | **90.42** | **94.25** | **67.68** | **51.57** |
 
 
 #### ICFG-PEDES dataset
@@ -92,7 +92,7 @@ python test.py --config_file 'path/to/model_dir/configs.yaml'
 |      CFine      |   60.83   |   76.55   |   82.42   |     -     |    -     |
 |    **CLIP**     |   56.74   |   75.72   |   82.26   |   31.84   |   5.03   |
 |     **IRRA ** | **63.46** | **80.24** | **85.82** | **38.05** | **7.92** |
-|      **DUNC（ours） ** | ViT-B-16/Xformer | |
+|      **DUNC（ours） ** | ViT-B-16/Xformer |  **67.88** | **82.67** | **87.66** | **40.37** | **8.21** |
 
 
 #### RSTPReid dataset
@@ -105,7 +105,7 @@ python test.py --config_file 'path/to/model_dir/configs.yaml'
 |      CFine      |   50.55   |   72.50   |   81.60   |     -     |     -     |
 |    **CLIP**     |   54.05   |   80.70   |   88.00   |   43.41   |   22.31   |
 | **IRRA ** | **60.20** | **81.30** | **88.20** | **47.17** | **25.28** |
-|      **DUNC （ours）** | ViT-B-16/Xformer | |
+|      **DUNC （ours）** | ViT-B-16/Xformer |  **66.14** | **84.53** | **89.25** | **50.61** | **27.74** |
 
 
 
