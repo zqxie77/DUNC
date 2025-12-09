@@ -57,7 +57,6 @@ python train.py \
 --root_dir 'your dataset root dir' \
 --num_epoch 60
 ```
-```
 
 ## Testing
 
