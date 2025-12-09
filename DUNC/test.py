@@ -18,7 +18,7 @@ from utils.iotools import load_train_configs
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="IRRA Test")
-    sub = '/home/qinyang/projects/Text2ImagepPerson/NoiseRID/DECL_IRRA/logs/RSTPReid/20230622_220805_iira_decl+0.8_IRRA'
+    sub = ''
     parser.add_argument("--config_file", default=f'{sub}/configs.yaml')
     args = parser.parse_args()
     args = load_train_configs(args.config_file)
